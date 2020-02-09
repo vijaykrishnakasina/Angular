@@ -1,0 +1,12 @@
+<p>board works!</p>
+
+<h1 >{{player}} turn</h1>
+
+<h1 *ngIf = "winner"> winner is : {{winner}}</h1>
+<main>
+    <app-square *ngFor = "let square of squares; let i = index"
+        [value] = "square"
+        (click) = "insertValue(i)">
+    </app-square>
+</main>
+
